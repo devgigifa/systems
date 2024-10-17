@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>All-in-One Web App</title>
+    
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 1200px;
+    width: 100%;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.app-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+.app-card:hover {
+    transform: scale(1.05);
+}
+
+.app-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.app-name {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .glass-container {
+        padding: 1rem;
+    }
+
+    .app-card {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>All-in-One Web App</h1>
+    </header>
+
+    <main>
+        <div class="glass-container">
+            <section class="app-container">
+                <div class="app-card">
+                    <a href="calculator.html">
+                        <img src="images/calculator.png" alt="Calculadora" class="app-image">
+                        <p class="app-name">Calculadora</p>
+                    </a>
+                </div>
+                <div class="app-card">
+                    <a href="age-calculator.html">
+                        <img src="images/age-calculator.png" alt="Calculadora de Idade" class="app-image">
+                        <p class="app-name">Calculadora de Idade</p>
+                    </a>
+                </div>
+                <div class="app-card">
+                    <a href="photo-filter.html">
+                        <img src="images/photo-filter.png" alt="Filtro de Fotos" class="app-image">
+                        <p class="app-name">Filtro de Fotos</p>
+                    </a>
+                </div>
+                <div class="app-card">
+                    <a href="music-player.html">
+                        <img src="images/music-player.png" alt="Music Player" class="app-image">
+                        <p class="app-name">Music Player</p>
+                    </a>
+                </div>
+                <!-- Adicione mais cards de apps aqui -->
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - All-in-One Web App</p>
+    </footer>
+</body>
+</html>
